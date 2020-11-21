@@ -1,7 +1,7 @@
 [gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Assets/skin.material" type="Material" id=1]
-[ext_resource path="res://Assets/cyborgFemaleA.png" type="Texture" id=3]
+[ext_resource path="res://Assets/criminalMaleA.png" type="Texture" id=2]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.5
@@ -160,7 +160,7 @@ bind/44/bone = -1
 bind/44/pose = Transform( -0.992803, 0.00958511, -0.119373, -0.119664, -0.039574, 0.992026, 0.00478277, 0.999171, 0.0404359, -0.340618, -0.128335, -0.0149813 )
 
 [sub_resource type="SpatialMaterial" id=4]
-albedo_texture = ExtResource( 3 )
+albedo_texture = ExtResource( 2 )
 
 [sub_resource type="Animation" id=5]
 length = 1.25
