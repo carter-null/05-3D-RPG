@@ -256,6 +256,7 @@ data = PoolVector3Array( 3.9116, 0.1154, -3.9116, 4.1724, 0.069, -4.1724, 4.1724
 shape = SubResource( 1 )
 
 [node name="StaticBody" type="StaticBody" parent="Bridge" index="0"]
+collision_mask = 2147483649
 
 [node name="CollisionShape" type="CollisionShape" parent="Bridge/StaticBody" index="0"]
 shape = SubResource( 2 )
@@ -504,6 +505,7 @@ shape = SubResource( 49 )
 shape = SubResource( 50 )
 
 [node name="StaticBody" type="StaticBody" parent="Tree3" index="0"]
+collision_layer = 2147483649
 
 [node name="CollisionShape" type="CollisionShape" parent="Tree3/StaticBody" index="0"]
 shape = SubResource( 51 )
@@ -644,6 +646,7 @@ shape = SubResource( 77 )
 shape = SubResource( 78 )
 
 [node name="StaticBody" type="StaticBody" parent="terrain_yellow_flat" index="0"]
+collision_mask = 2147483649
 
 [node name="CollisionShape" type="CollisionShape" parent="terrain_yellow_flat/StaticBody" index="0"]
 shape = SubResource( 79 )
