@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -31,6 +31,17 @@ height = 2.06101
 
 [sub_resource type="SphereShape" id=4]
 radius = 7.27079
+
+[sub_resource type="Environment" id=5]
+background_mode = 1
+background_color = Color( 0.184314, 0, 0.478431, 1 )
+background_energy = 4.56
+ambient_light_color = Color( 0.164706, 0, 0.517647, 1 )
+auto_exposure_scale = 0.12
+auto_exposure_min_luma = 0.0
+auto_exposure_max_luma = 1.22
+glow_enabled = true
+adjustment_enabled = true
 
 [node name="Game" type="Spatial"]
 
@@ -187,6 +198,9 @@ __meta__ = {
 stream = ExtResource( 4 )
 volume_db = -26.0
 autoplay = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 5 )
 [connection signal="body_entered" from="NPC/Area" to="NPC" method="_on_Area_body_entered"]
 [connection signal="body_exited" from="NPC/Area" to="NPC" method="_on_Area_body_exited"]
 [connection signal="timeout" from="UI/Timer" to="UI" method="_on_Timer_timeout"]
