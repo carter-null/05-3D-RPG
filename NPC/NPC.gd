@@ -3,10 +3,10 @@ extends KinematicBody
 onready var Dialogue = get_node("/root/Game/UI/Dialogue")
 
 var dialogue = [
-	"Welcome to the game! (Press E to continue)"
-	, "Your life depends on your speed and accuracy."
+	"Welcome to Purple Haze! (Press E to continue)"
+	, "You must shoot quickly and accurately in order to survive..."
 	, "Shoot the eight hidden targets and defeat the drone before you run out of time!"
-	, "The challenge starts as soon as you press E."
+	, "Press E to begin."
 ]
 
 
