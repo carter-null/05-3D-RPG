@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -10,6 +10,8 @@
 [ext_resource path="res://NPC/NPC.gd" type="Script" id=8]
 [ext_resource path="res://UI/Dialogue.gd" type="Script" id=9]
 [ext_resource path="res://UI/UI.gd" type="Script" id=10]
+[ext_resource path="res://Drone/Drone.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Player/WorkAround.gd" type="Script" id=12]
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 1, 0, 0, 1 )
@@ -54,9 +56,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 50 )
 mesh = SubResource( 2 )
 material/0 = null
 
-[node name="KinematicBody" type="KinematicBody" parent="Player"]
+[node name="KinematicBody" type="RigidBody" parent="Player"]
 collision_layer = 2
 collision_mask = 2
+script = ExtResource( 12 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Player/KinematicBody"]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, -0.00855637, 1.97678, 0.243576 )
@@ -93,8 +96,15 @@ transform = Transform( -0.611349, 0.28752, 0.737282, 0.235062, 0.95559, -0.17774
 [node name="Target8" parent="Target_container" instance=ExtResource( 5 )]
 transform = Transform( -0.90925, 0.415284, 0.0283421, 0.413576, 0.909018, -0.051389, -0.0471046, -0.0350038, -0.998276, -17.5646, 0, -46.3583 )
 
+[node name="Drone_container" type="Spatial" parent="."]
+
+[node name="Drone" parent="Drone_container" groups=[
+"target",
+] instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, 100 )
+
 [node name="NPC" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40.4739, 0.520719, -13.3924 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40.4739, 0.520719, -22.157 )
 script = ExtResource( 8 )
 
 [node name="Area" type="Area" parent="NPC"]
@@ -106,6 +116,14 @@ shape = SubResource( 4 )
 
 [node name="UI" type="CanvasLayer" parent="."]
 script = ExtResource( 10 )
+
+[node name="Damage" type="ColorRect" parent="UI"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 1, 0, 0, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Background" type="ColorRect" parent="UI"]
 anchor_right = 1.0

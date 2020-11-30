@@ -17,6 +17,7 @@ func _ready():
 
 
 
+
 # warning-ignore:unused_argument
 func _on_Area_body_entered(body):
 	Dialogue.start_dialogue(dialogue)
