@@ -1,11 +1,6 @@
-# 3D-Character
+# Purple Haze
 
-An animated 3D character that can be used in the 3D-RPG project.
-
-Based on the [Kenney Character Assets](https://kenney.itch.io/kenney-character-assets) provided by kenney.nl. The model and animations were compiled in Blender and then imported into Godot.
-
-# Low Poly Scene
-Made by Jaynam Games and downloaded from Patreon.
+Purple Haze is a third person shooter with a focus on atmosphere and immersion. The player is equipped with a blaster capable of destorying targets hidden throughout the map. They are given a short amount of time to find eight targets while they are stalked by a drone flying over head. Accidentally stepping into the drone's attack will cost the player many points, so avoid the drone at all costs! Only after successfully finding and shooting all the hidden targets will the player be able to destory the drone for more points! Have fun and enjoy the captivating world of Purple Haze.
 
 ## Implementation
-Created in Blender 2.90.1 and Godot 3.2.2
+Created in Godot 3.2.2
